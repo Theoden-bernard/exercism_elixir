@@ -1,14 +1,9 @@
 defmodule BirdCount do
+
+  def today(list), do: List.first(list)
+
+  def increment_day_count([]), do: [1]
+
+  def increment_day_count(list), do: [(today(list) + 1)] ++ tl(list)
   
-  def count([]) do 
-    0
-  end
-
-  def count([head | tail]) do 
-    result = 1 + count(tail)
-    IO.inspect (head)
-    IO.inspect (tail)
-    result
-  end
-
 end
