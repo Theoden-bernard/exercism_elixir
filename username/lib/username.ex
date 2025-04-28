@@ -2,9 +2,7 @@ defmodule Username do
 
   def sanitize(word), do: sanitize(word, ~c"")
 
-  def sanitize([], word) do
-    word
-  end
+  def sanitize([], word), do: word
 
   def sanitize([head | tail], new_word) do
 
