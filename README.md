@@ -1,27 +1,3 @@
-defmodule UpdateReadme do
-  def run() do
-    exercises = get_exercises_list()
-
-    readme_content = generate_readme_content(exercises)
-
-    File.write!("README.md", readme_content)
-    IO.puts("README.md mis à jour avec succès !")
-  end
-
-  defp get_exercises_list() do
-    "."
-    |> File.ls!()
-    |> Enum.filter(&File.dir?/1)
-    |> Enum.reject(&(&1 in [".git", "_build", "deps"]))
-    |> Enum.sort()
-    |> Enum.map(fn dossier -> "- [#{dossier}](./#{dossier})" end)
-    |> Enum.join("\n")
-  end
-
-  defp generate_readme_content(exercises) do
-    """
-    # 🧠 Elixir Exercises
-
     Welcome to my Elixir exercises repository.  
     Each folder contains a small project developed to learn or deepen my understanding of the language.
 
@@ -34,7 +10,18 @@ defmodule UpdateReadme do
     Each exercise is an independent project with its own `mix` environment.  
     Here are the currently available folders:
 
-    #{exercises}
+    - [bird_count](./bird_count)
+    - [freelancer_rate](./freelancer_rate)
+    - [guessing_game](./guessing_game)
+    - [hello_word](./hello_word)
+    - [high_school_sweetheart](./high_school_sweetheart)
+    - [kitchen_calculator](./kitchen_calculator)
+    - [language_list](./language_list)
+    - [lasagna](./lasagna)
+    - [log_level](./log_level)
+    - [pacman_rules](./pacman_rules)
+    - [secrets](./secrets)
+    - [username](./username)
 
     > 🔄 This list can be generated automatically using an Elixir script.
 
@@ -86,5 +73,3 @@ defmodule UpdateReadme do
     Developed with passion by **Théoden** ⚔️  
     > "Code every day. Learn every day. Grow every day." 💪
     """
-  end
-end
