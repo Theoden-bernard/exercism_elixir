@@ -4,7 +4,7 @@ You and your friends love to play pen-and-paper role-playing games, but you noti
 ## 1. Welcome the new player
 Implement the RPG.CharacterSheet.welcome/0 function. It should print a welcome message, and return :ok.
 
-```elexir
+```elixir
 RPG.CharacterSheet.welcome()
 # > Welcome! Let's fill out your character sheet together.
 # => :ok
@@ -13,7 +13,7 @@ RPG.CharacterSheet.welcome()
 ## 2. Ask for the character's name
 Implement the RPG.CharacterSheet.ask_name/0 function. It should print a question, wait for an answer, and return the answer without leading and trailing whitespace.
 
-```elexir
+```elixir
 RPG.CharacterSheet.ask_name()
 # > What is your character's name?
 # < Mathilde
@@ -23,7 +23,7 @@ RPG.CharacterSheet.ask_name()
 ## 3. Ask for the character's class
 Implement the RPG.CharacterSheet.ask_class/0 function. It should print a question, wait for an answer, and return the answer without leading and trailing whitespace.
 
-```elexir
+```elixir
 RPG.CharacterSheet.ask_class()
 # > What is your character's class?
 # < healer
@@ -33,7 +33,7 @@ RPG.CharacterSheet.ask_class()
 ## 4. Ask for the character's level
 Implement the RPG.CharacterSheet.ask_level/0 function. It should print a question, wait for an answer, and return the answer as an integer.
 
-```elexir
+```elixir
 RPG.CharacterSheet.ask_level()
 # > What is your character's level?
 # < 2
@@ -43,7 +43,7 @@ RPG.CharacterSheet.ask_level()
 ## 5. Combine previous steps into one
 Implement the RPG.CharacterSheet.run/0 function. It should welcome the new player, ask for the character's name, class, and level, and return the character sheet as a map. It should also print the map with the label "Your character".
 
-```elexir
+```elixir
 RPG.CharacterSheet.run()
 # > Welcome! Let's fill out your character sheet together.
 # > What is your character's name?
