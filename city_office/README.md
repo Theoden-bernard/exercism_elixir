@@ -41,9 +41,9 @@ For some unknown to you reason, the city office's internal system uses two diffe
 
 Document this fact by defining three custom public types:
 
-address_map - a map with the keys :street, :postal_code, and :city. Each key holds a value of type string.
-address_tuple - a tuple with three values - street, postal_code, and city. Each value is of type string. Differentiate the values by giving them names in the typespec.
-address - can be either an address_map or an address_tuple.
+- address_map - a map with the keys :street, :postal_code, and :city. Each key holds a value of type string.
+- address_tuple - a tuple with three values - street, postal_code, and city. Each value is of type string. Differentiate the values by giving them names in the typespec.
+- address - can be either an address_map or an address_tuple.
 ## 6. Document formatting the address
 Add documentation and a typespec to the Form.format_address/1 function. The documentation should read:
 
