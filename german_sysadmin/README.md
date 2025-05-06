@@ -27,14 +27,11 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
 <table>
   <tr>
     <td align="center" width="96">
-      German
-    <td>
-    <td align="center" width="96">
-      character
-    <td>
+      German character
+    </td>
     <td align="center" width="96">
       Latin substitute
-    <td>
+    </td>
   </tr>
   <tr>
     <td align="center" width="96">
