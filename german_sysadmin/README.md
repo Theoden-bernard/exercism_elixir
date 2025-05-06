@@ -25,7 +25,6 @@ Username.sanitize(~c"mark_fischer$$$")
 There are 4 non-Latin characters in the German alphabet, and all of them have commonly-recognized Latin substitutes.
 
 <tab>
-
   <tr>
     <td align="center" width="96">
       German
@@ -37,7 +36,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
       Latin substitute
     <td>
   </tr>
-
   <tr>
     <td align="center" width="96">
       ä
@@ -46,7 +44,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
       ae
     </tb>
   </tr>
-
  <tr>
   <td align="center" width="96">
     ö
@@ -55,7 +52,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
     oe
   </tb>
  </tr>
-
  <tr>
     <td align="center" width="96">
       ü
@@ -64,7 +60,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
       ue
     </td>
  </tr>
-
  <tr>
     <td align="center" width="96">
       ß
@@ -73,7 +68,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
       ss
     </td>
  </tr>
-
 </tan>
 Extend the sanitize/1 function. It should substitute German characters according to the table. You can safely assume all usernames are already downcase.
 
