@@ -4,36 +4,21 @@ defmodule WineCellar do
     red: "Fermented with skin contact using dark-colored grapes.",
     rose: "Fermented with some skin contact, but not enough to qualify as a red wine."]
 
-  def filter(cellar, color, opts ) when Keyword.get(opts, :country) != nil do
-    :country
-  end
-  
-  def filter(cellar, color, opts ) when Keyword.get(opts, :year) != nil do
-    :year
-  end
-  
   def filter(cellar, color, opts ) when opts != [] do
-
-      #aux lieux d'ecrire en dure les :country je doit selectioneer l'element 1 puis l'element 2  
       if(Keyword.get(opts, :country) != nil)do
+        IO.inspect(Keyword.get(opts, :country))
         Keyword.get_values(cellar, color)
-        |> filter_by_year( Keyword.get(opts, :year))
         |> filter_by_country(Keyword.get(opts, :country))
+        |> filter_by_year( Keyword.get(opts, :year))
       else
         Keyword.get_values(cellar, color)
         |> filter_by_year( Keyword.get(opts, :year))
       end
-#      [head | tail] = opts
- #     test = Keyword.get_values(cellar, color)
-  #    |> filter_by_year(elem(head, 1))
-   #   filter(test, 0, tail)
   end
   
   def filter(cellar, color, _opts \\ []),
     do: Keyword.get_values(cellar, color)
   
-    
-
   # The functions below do not need to be modified.
 
   defp filter_by_year(wines, year)
